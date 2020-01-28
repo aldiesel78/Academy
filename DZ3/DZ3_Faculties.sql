@@ -24,10 +24,10 @@ DROP TABLE IF EXISTS `Faculties`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Faculties` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `Декан (Dean)` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `Название (Name)` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Dean` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Декан',
+  `Name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `Название (Name)_UNIQUE` (`Название (Name)`)
+  UNIQUE KEY `Название (Name)_UNIQUE` (`Name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-28 16:08:34
+-- Dump completed on 2020-01-28 16:33:30

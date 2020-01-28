@@ -24,14 +24,14 @@ DROP TABLE IF EXISTS `Teachers`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Teachers` (
   `id` int NOT NULL,
-  `Дата трудоустройства (EmploymentDate)` date NOT NULL,
-  `Ассистент (IsAssistant)` bit(8) NOT NULL DEFAULT b'110000',
-  `Профессор (IsProfessor)` bit(8) NOT NULL DEFAULT b'110000',
-  `Имя (Name)` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `Должность (Position)` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `Надбавка (Premium)` int unsigned NOT NULL DEFAULT '0',
-  `Ставка (Salary)` int unsigned NOT NULL,
-  `Фамилия (Surname)` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `EmploymentDate` date NOT NULL COMMENT 'Дата трудоустройства ',
+  `IsAssistant` bit(8) NOT NULL DEFAULT b'110000',
+  `IsProfessor` bit(8) NOT NULL DEFAULT b'110000',
+  `Name` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Position` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Premium` int unsigned NOT NULL DEFAULT '0' COMMENT 'п',
+  `Salary` int unsigned NOT NULL COMMENT 'о',
+  `Surname` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-28 16:08:34
+-- Dump completed on 2020-01-28 16:33:30

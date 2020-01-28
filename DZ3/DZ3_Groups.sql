@@ -24,11 +24,11 @@ DROP TABLE IF EXISTS `Groups`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Groups` (
   `id` int NOT NULL,
-  `Название (Name)` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `Рейтинг (Raiting)` int unsigned NOT NULL DEFAULT '0',
-  `Курс (Year)` int NOT NULL DEFAULT '1',
+  `Name` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Raiting` int unsigned NOT NULL DEFAULT '0',
+  `Year` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
-  UNIQUE KEY `Название (Name)_UNIQUE` (`Название (Name)`)
+  UNIQUE KEY `Название (Name)_UNIQUE` (`Name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-01-28 16:08:34
+-- Dump completed on 2020-01-28 16:33:30
